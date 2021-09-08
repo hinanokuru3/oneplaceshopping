@@ -27,7 +27,12 @@
     justify-content: space-around;
 }
 
-
+nav ul li {
+	list-style: none;
+	font-size: 25px;
+    width: 180px;
+    text-align: center;
+}
 
 .explain {
 	font-size: 30px;
@@ -41,10 +46,10 @@ a{
 	color: #505050;
 }
 
-/*リストタグ
+/*リストタグ*/
 ul, ol {
   padding: 0;
-}*/
+}
 
 ul li {
   position: relative;
@@ -58,7 +63,7 @@ ul li {
   border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
 }
 
-ul li.wrapper:before{ 
+ul li:before{ 
   display:inline-block; 
   vertical-align: middle;
   /*以下白丸つくる*/
