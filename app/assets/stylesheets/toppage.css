@@ -27,7 +27,7 @@
     justify-content: space-around;
 }
 
-nav ul:not([navbar-nav])  li {
+.select_button{
 	list-style: none;
 	font-size: 25px;
     width: 180px;
@@ -51,7 +51,7 @@ ul, ol {
   padding: 0;
 }
 
-ul :not([navbar-nav]) li {
+.select_button {
   position: relative;
   list-style-type: none!important;/*ポチ消す*/
   padding: 0.5em 0.5em 0.5em 0.5em;
@@ -63,7 +63,7 @@ ul :not([navbar-nav]) li {
   border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
 }
 
-ul :not([navbar-nav]) li:before{ 
+li.select_button:before{ 
   display:inline-block; 
   vertical-align: middle;
   /*以下白丸つくる*/
