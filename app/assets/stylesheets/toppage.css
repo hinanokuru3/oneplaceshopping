@@ -99,7 +99,7 @@ ul li:before{
 }
 
 h1:before {
-	content: url('cart2.png');
+	content: url('shopping/cart2.png');
 }
 
 h2 {
