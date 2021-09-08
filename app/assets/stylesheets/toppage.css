@@ -27,7 +27,7 @@
     justify-content: space-around;
 }
 
-nav ul li {
+nav ul:not([navbar-nav])  li {
 	list-style: none;
 	font-size: 25px;
     width: 180px;
@@ -51,7 +51,7 @@ ul, ol {
   padding: 0;
 }
 
-ul li {
+ul :not([navbar-nav]) li {
   position: relative;
   list-style-type: none!important;/*ポチ消す*/
   padding: 0.5em 0.5em 0.5em 0.5em;
@@ -63,7 +63,7 @@ ul li {
   border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
 }
 
-ul li:before{ 
+ul :not([navbar-nav]) li:before{ 
   display:inline-block; 
   vertical-align: middle;
   /*以下白丸つくる*/
