@@ -41,8 +41,8 @@
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
           　
-          <div class="form-button mb-5" style="background: #f16272;">
-            <button type="submit" class="btn btn-block">Sign up</button>
+          <div class="form-button mb-5" style="background: #f16272; border-radius: 10px;">
+            <%= f.submit 'Sign up', class: 'btn btn-block'%>
           </div>
         <% end %>
       </div>
