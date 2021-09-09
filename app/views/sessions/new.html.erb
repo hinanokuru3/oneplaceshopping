@@ -20,7 +20,7 @@
     
                 <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
                     
-                    <div class="form-group mt-3 mb-4">
+                    <div class="form-group mt-3 mb-4" style="height:30px;">
                         <%= f.label :email, 'Email' %>
                         <%= f.email_field :email, class: 'form-control input-lg' %>
                     </div>
@@ -31,7 +31,7 @@
                     </div>
     
                     <div class="form-button mb-5 col-form-label-lg" style="background: #f16272; border-radius: 10px; ">
-                        <%= f.submit 'Login', class: 'btn btn-block',style: "font-size: 25px; " %>
+                        <%= f.submit 'Login', class: 'btn btn-block',style: "font-size: 20px;" %>
                     </div>
                 <% end %>
     
