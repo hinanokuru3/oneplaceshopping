@@ -9,26 +9,32 @@
 			</div>
 	    </div>
 	</div>
-	     
-	        <div class="form-wrapper">
-                <h1>Login</h1>
-                <form>
-                    <div class="form-item">
-                      　<label for="email"></label>
-                        <input type="email" name="email" required="required" placeholder="Email Address"></input>
-                    </div>
-                    <div class="form-item">
-                        <label for="password"></label>
-                        <input type="password" name="password" required="required" placeholder="Password"></input>
-                    </div>
-                    <div class="button-panel">
-                        <input type="submit" class="button" title="Login" value="Login"></input>
-                    </div>
-                </form>
-                <div class="form-footer">
-                    <p><a href="signup">Create an account</a></p>
+	
+	<div class="text-center">
+        <h1>Log in</h1>
+    </div>
 
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+
+            <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+                <div class="form-group">
+                    <%= f.label :email, 'Email' %>
+                    <%= f.email_field :email, class: 'form-control' %>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <%= f.label :password, 'Password' %>
+                    <%= f.password_field :password, class: 'form-control' %>
+                </div>
+
+                <%= f.submit 'Log in', class: 'btn btn-primary btn-block' %>
+            <% end %>
+
+            <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
         </div>
+    </div>
+</div>
+	     
 	        
