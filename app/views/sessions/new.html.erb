@@ -12,7 +12,7 @@
 	
 	<div class="form" style="color: #5e5e5e;">
     	<div class="text-center" style="font-family: cursive;">
-            <h1>Log in</h1>
+            <h1>Login</h1>
         </div>
     
         <div class="row">
@@ -25,17 +25,17 @@
                         <%= f.email_field :email, class: 'form-control' %>
                     </div>
     
-                    <div class="form-group col-form-label-lg mb-4">
+                    <div class="form-group input-lg mb-4">
                         <%= f.label :password, 'Password' %>
                         <%= f.password_field :password, class: 'form-control' %>
                     </div>
     
-                    <div class="form-button mb-5 col-form-label-lg" style="background: #f16272; border-radius: 10px;">
-                        <%= f.submit 'Sign up', class: 'btn btn-block'%>
+                    <div class="form-button mb-5 input-lg" style="background: #f16272; border-radius: 10px;">
+                        <%= f.submit 'Login', class: 'btn btn-block'%>
                     </div>
                 <% end %>
     
-                <div class="mb-4" style="font-size: 20px;">
+                <div class="mb-5" style="font-size: 30px;">
                     <p>New user? <%= link_to 'Sign up now!', signup_path %></p>
                 </div>
             </div>
