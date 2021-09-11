@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  #get 'searchs/top'
+  get 'searchs/top'
   get 'shopping_centers/index'
   get 'shopping_centers/show'
   get 'sessions/new'
