@@ -6,4 +6,8 @@ class ShoppingCentersController < ApplicationController
   def show
     @shopping_center=ShoppingCenter.find(params[:id])
   end
+  
+  def search
+    @shopping_centers = ShoppingCenters.search(params[:keyword])
+  end
 end
