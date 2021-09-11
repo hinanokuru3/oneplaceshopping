@@ -5,4 +5,11 @@ class ShoppingCenter < ApplicationRecord
     
     
     has_many :shops
+    
+    def self.search(search)
+    if search != ""
+      ShoppingCenter.where(['title LIKE(?) OR explanation LIKE(?) OR animal_name LIKE(?)', "%#{search}%", "%#{search}%", "%#{search}%"])
+    else
+      ShoppingCenter.includes(:user).order('created_at DESC')
+    end
 end
