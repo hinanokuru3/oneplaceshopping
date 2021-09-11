@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_09_081936) do
+ActiveRecord::Schema.define(version: 2021_09_10_152726) do
+
+  create_table "shopping_centers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "parking_area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.time "opening_hours"
+    t.date "regular_holiday"
+    t.integer "floor"
+    t.string "phone_number"
+    t.string "category"
+    t.string "payment_method"
+    t.bigint "shopping_center_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shopping_center_id"], name: "index_shops_on_shopping_center_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -20,4 +43,5 @@ ActiveRecord::Schema.define(version: 2021_09_09_081936) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "shops", "shopping_centers"
 end
