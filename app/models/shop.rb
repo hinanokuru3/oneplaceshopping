@@ -1,5 +1,5 @@
 class Shop < ApplicationRecord
-  belongs_to :shopping_center
+  belongs_to :shoppingcenter
   
   validates :name, presence: true, length: { maximum: 50 }
   validates :address, allow_blank: true, length: { maximum: 50 }
