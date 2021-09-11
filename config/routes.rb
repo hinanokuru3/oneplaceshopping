@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'shopping_centers/index'
+  get 'shopping_centers/show'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
@@ -15,4 +17,7 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create]
+  
+  resources :shopping_centers, only: [:index, :show]
+  resources :shops, only: [:index, :show]
 end
