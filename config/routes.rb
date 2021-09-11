@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   resources :shopping_centers, only: [:index, :show]
   resources :shops, only: [:index, :show]
   
-  get 'searchs/about', to: 'searchs#top',　as: search
+  #get 'searchs/about', to: 'searchs#top',　as: search
 end
