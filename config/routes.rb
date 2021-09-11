@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'searchs/top'
   get 'shopping_centers/index'
   get 'shopping_centers/show'
   get 'sessions/new'
@@ -20,7 +19,11 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :create]
   
   resources :shopping_centers, only: [:index, :show]
+  collection do
+    get'search'
+  end
+  
   resources :shops, only: [:index, :show]
   
-  #get 'searchs/about', to: 'searchs#top',　as: search
+ 
 end
