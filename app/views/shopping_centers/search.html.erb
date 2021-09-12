@@ -11,9 +11,10 @@
         <h1>検索</h1>
         <%= search_form_for @q, url: search_shopping_centers_path do |f| %>
             <%= f.label :name_cont, '店名' %>
-            <%= search_field_tag "q[shops_name_matches_all][]" %>
-            <%= search_field_tag "q[shops_name_matches_all][]" %>
-            <%= search_field_tag "q[shops_name_matches_all][]" %>
+            <%= f.search_field :shops_name_cont %>
+            <%= f.search_field :shops_name_cont %>
+            <%= f.search_field :shops_name_cont %>
+            
             <br>
             <%= f.submit '検索' %>
         <% end %>
