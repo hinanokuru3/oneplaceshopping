@@ -1,6 +1,6 @@
 class ShoppingCentersController < ApplicationController
   def index
-    @shopping_centers=ShoppingCenters.all
+    @shopping_centers=ShoppingCenter.all
   end
   before_action :set_q, only: [:search]
 
