@@ -17,10 +17,11 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create]
   
-  resources :shopping_centers, only: [:show]
-  get 'shopping_centers', to: 'shopping_centers#search'
-
-  
+  resources :shopping_centers do
+    collection do
+      get'search'
+    end
+  end
   resources :shops, only: [:index, :show]
   
  
