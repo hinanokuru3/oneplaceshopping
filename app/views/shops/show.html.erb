@@ -11,7 +11,14 @@
         <h1>～店舗情報～</h1>
         <table class="table">
             <tr><td>店舗名</td><td><%= @shop.name %></td></tr>
+         　 <tr><td>カテゴリー</td><td><%= @shop.category %></td></tr>
          　 <tr><td>住所</td><td><%= @shop.address %></td></tr>
+            <tr><td>お問い合わせ</td><td><%= @shop.phone_number %></td></tr>
+            <tr><td>営業時間</td><td><%= @shop.opening_hours %></td></tr>
+            <tr><td>定休日</td><td><%= @shop.regular_holiday %></td></tr>
+            <tr><td>フロア</td><td><%= @shop.floor %></td></tr>
+            <tr><td>支払い方法</td><td><%= @shop.payment_method %></td></tr>
+            
             
         </table>
     </div>
