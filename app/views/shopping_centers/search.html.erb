@@ -16,4 +16,15 @@
             <%= f.submit '検索' %>
         <% end %>
     </div>
+    
+    <div>
+        <h1>～ショッピングモール情報～</h1>
+        <table class="table">
+            <thead><tr><th>ショッピングモール名</th></tr></thead>
+            <tbody>
+                <% @results.each do |shopping_center| %>
+                    <td><%= shopping_center.name %></td>
+            </tbody>
+        </table>
+    </div>
 </div>
