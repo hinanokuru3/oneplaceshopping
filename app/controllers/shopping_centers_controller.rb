@@ -1,7 +1,7 @@
 class ShoppingCentersController < ApplicationController
-  #def index
-    #@shopping_centers=ShoppingCenters.order(id: :desc).page(params[:page]).per(25)
-  #end
+  def index
+    @shopping_centers=ShoppingCenters.all
+  end
   before_action :set_q, only: [:search]
 
 
