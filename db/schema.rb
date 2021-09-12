@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2021_09_10_152726) do
   create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.time "opening_hours"
-    t.date "regular_holiday"
-    t.integer "floor"
+    t.string "opening_hours"
+    t.string "regular_holiday"
+    t.string "floor"
     t.string "phone_number"
     t.string "category"
     t.string "payment_method"
