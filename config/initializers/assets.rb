@@ -15,4 +15,5 @@ Rails.application.config.assets.precompile += %w(
     toppage.css
     signup.css
     login.css
+    shopping_centers.css
 )
