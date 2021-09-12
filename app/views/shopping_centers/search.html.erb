@@ -43,16 +43,23 @@
     </div>
     
     <div>
-        <div class="mt-5 text-center">
+        <div class="mt-7 mb-5 text-center">
             <h1>～ショッピングモール情報～</h1>
         </div>
-        <table class="table mb-5">
-            <thead><tr><th>ショッピングモール名</th></tr></thead>
-            <tbody>
-                <% @results.each do |shopping_center| %>
-                    <td><%= link_to shopping_center.name, shopping_center_path(shopping_center) %></td>
-                <% end %>
-            </tbody>
+        <table class="table mb-7">
+            <div class="text-center mb-5">
+                <thead>
+                    <tr><th>ショッピングモール名</th></tr>
+                </thead>
+            </div>
+            <div class="text-center">
+                <tbody>
+                    <% @results.each do |shopping_center| %>
+                        <td><%= link_to shopping_center.name, shopping_center_path(shopping_center) %></td>
+                    <% end %>
+                </tbody>
+            </div>
+            </div>
         </table>
     </div>
 </div>
