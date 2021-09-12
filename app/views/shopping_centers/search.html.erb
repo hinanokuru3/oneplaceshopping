@@ -27,7 +27,7 @@
             <thead><tr><th>ショッピングモール名</th></tr></thead>
             <tbody>
                 <% @results.each do |shopping_center| %>
-                    <td><%= link_to shopping_center.name, shopping_center_path(shops.shopping_center) %></td>
+                    <td><%= link_to shopping_center.name, shopping_center_path%></td>
                 <% end %>
             </tbody>
         </table>
