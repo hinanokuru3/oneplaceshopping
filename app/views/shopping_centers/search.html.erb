@@ -55,7 +55,7 @@
                 
                 <tbody>
                     <% @results.each do |shopping_center| %>
-                        <tr><td class=".h-50"><%= link_to shopping_center.name, shopping_center_path(shopping_center) %></td></tr>
+                        <tr><td style="font-size: 20px;"><%= link_to shopping_center.name, shopping_center_path(shopping_center) %></td></tr>
                     <% end %>
                 </tbody>
             </table>
