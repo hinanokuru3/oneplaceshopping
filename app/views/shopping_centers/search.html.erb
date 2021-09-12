@@ -8,17 +8,24 @@
     	</div>
     </div>
         
-    <div>  
-        <h1>検索</h1>
+    <div> 
+        <div class="mt-5 text-center">
+            <h1>～検索ページ～</h1>
+            <div class="mt-3 mb-3">
+                <h2>あなたの行きたい店リスト</h2>
+            </div>
+        </div>
         <%= search_form_for @q, url: search_shopping_centers_path do |f| %>
-            <%= f.label :shops_name_cont, 'その１' %>
+            <%= f.label :shops_name_cont, '１' %>
             <%= f.search_field :shops_name_cont %>
-            <%= f.label :shops_name_cont, 'その２' %>
+            <%= f.label :shops_name_cont, '２' %>
             <%= f.search_field :shops_name_cont %>
-            <%= f.label :shops_name_cont, 'その３' %>
+            <%= f.label :shops_name_cont, '３' %>
             <%= f.search_field :shops_name_cont %>
             <br>
-            <%= f.submit '検索' %>
+            <div class="form-button mt-3  col-form-label" style="background: #f16272; border-radius: 10px; ">
+                <%= f.submit '検索', class: 'btn ',style: "font-size: 20px;" %>
+            </div>
         <% end %>
     </div>
     
