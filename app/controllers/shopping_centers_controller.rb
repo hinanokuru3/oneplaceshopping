@@ -5,9 +5,9 @@ class ShoppingCentersController < ApplicationController
   before_action :set_q, only: [:search]
 
 
-  #def show
-    #@shopping_center=ShoppingCenter.find(params[:id])
-  #end
+  def show
+    @shopping_center=ShoppingCenter.find(params[:id])
+  end
   
   def search
     @results = @q.result
