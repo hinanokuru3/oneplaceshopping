@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'shops/show'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
