@@ -7,12 +7,25 @@
     	</div>
     </div>
     
-    <h1>～ショッピングモール情報～</h1>
-    <table class="table">
-        <tr><td>ショッピングモール名</td><td><%= @shopping_center.name %></td></tr>
-     　 <tr><td>住所</td><td><%= @shopping_center.address %></td></tr>
-        <tr><td>駐車場</td><td><<%= @shopping_center.parking_area %></td></tr>
-    </table>
+    <div>
+        <h1>～ショッピングモール情報～</h1>
+        <table class="table">
+            <tr><td>ショッピングモール名</td><td><%= @shopping_center.name %></td></tr>
+         　 <tr><td>住所</td><td><%= @shopping_center.address %></td></tr>
+            <tr><td>駐車場</td><td><%= @shopping_center.parking_area %></td></tr>
+        </table>
+    </div>
+    
+    <div>
+        <table class="table">
+            <thead><tr><th>店舗一覧</th></tr></thead>
+            <tbody>
+                <% @shopping_center.shops.each do |shop| %>
+                    <td><%= link_to shop.name, shop_path(shop) %></td>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
 </div>
 
     
