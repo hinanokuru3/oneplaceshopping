@@ -10,11 +10,11 @@
     <div>  
         <h1>検索</h1>
         <%= search_form_for @q, url: search_shopping_centers_path do |f| %>
-            <%= f.label :name_cont, '店名' %>
+            <%= f.label :name_cont, 'その１' %>
             <%= f.search_field :shops_name_cont %>
-            <%= f.label :name_cont, '店名' %>
+            <%= f.label :name_cont, 'その２' %>
             <%= f.search_field :shops_name_cont %>
-            <%= f.label :name_cont, '店名' %>
+            <%= f.label :name_cont, 'その３' %>
             <%= f.search_field :shops_name_cont %>
             <br>
             <%= f.submit '検索' %>
