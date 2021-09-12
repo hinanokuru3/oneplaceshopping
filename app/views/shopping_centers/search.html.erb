@@ -17,8 +17,8 @@
         </div>
         <%= search_form_for @q, url: search_shopping_centers_path do |f| %>
             <div class="form-group">
-                <%= f.label :shops_name_cont, '１' %>
-                <div class="offset-sm-4 col-sm-4">
+                <div class="offset-sm-4 col-sm-4">    
+                    <%= f.label :shops_name_cont, '１' %>
                     <%= f.search_field :shops_name_cont, class: 'form-control form-control-lg' %>
                 </div>
             </div>
