@@ -2,7 +2,7 @@ class ShoppingCentersController < ApplicationController
   #def index
     #@shopping_centers=ShoppingCenter.all
   #end
-  before_action :shop only: [:search]
+  before_action :shop, only: [:search]
   def show
     @shopping_center=ShoppingCenter.find(params[:id])
   end
