@@ -9,7 +9,7 @@ class ShoppingCentersController < ApplicationController
   
   def search
     @shop=Shop.where("name LIKE ?", "#{params[:name1]}")
-    @results=ShoppingCenter.find_by(shop_name: @shop)
+    @results=ShoppingCenter.find_by(shop: @shop)
   end
 
   private
