@@ -8,7 +8,7 @@ class ShoppingCentersController < ApplicationController
   end
   
   def search
-    @shopping_center=shop.ShoppingCenter
+    @shopping_center=shop.shopping_centers
   end
 
   private
