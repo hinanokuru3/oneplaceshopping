@@ -42,7 +42,7 @@
               
                 
                 <tbody>
-                    <% @shop.each do |shopping_center| %>
+                    <% @shopping_center.each do |shopping_center| %>
                         <tr><td style="font-size: 20px;"><%= link_to shopping_center.name, shopping_center_path(shopping_center) %></td></tr>
                     <% end %>
                 </tbody>
