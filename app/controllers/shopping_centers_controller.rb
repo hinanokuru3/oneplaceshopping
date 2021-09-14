@@ -9,7 +9,7 @@ class ShoppingCentersController < ApplicationController
   def search
     binding.pry
     #@shop=Shop.where("name LIKE ?", "#{params[:name1]}")
-    @shopping_center=ShoppingCenter.joins(:shops).where(shops: {name: params[:name1]})and(shops: {name: params[:name2]})and(shops: {name: params[:name3]
+    @shopping_center=ShoppingCenter.joins(:shops).where(shops: {name: params[:name1]}). and(shops: {name: params[:name2]}). and(shops: {name: params[:name3]
   end
 
   private
