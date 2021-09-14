@@ -8,7 +8,7 @@ class ShoppingCentersController < ApplicationController
   
   def search
     @shop=Shop.where("name LIKE ?", "#{params[:name1]}")
-    @shopping_center=@shop.shopping_center
+    #@shopping_center=@shop.shopping_center
   end
 
   private
