@@ -8,7 +8,7 @@ class ShoppingCentersController < ApplicationController
   
   def search
     #@shop=Shop.where("name LIKE ?", "#{params[:name1]}")
-    @shopping_center=ShoppingCenter.joins(:shops).where("shop.name LIKE '%name1%' ").count
+    @shopping_center=ShoppingCenter.joins(:shops).where("shop.name LIKE '%#{params[:name1]}'").count
   end
 
   private
