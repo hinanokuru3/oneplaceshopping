@@ -18,19 +18,21 @@
         
         <div class="search_form offset-sm-4 col-sm-6 ">
             <%= form_with url: search_shopping_centers_path, local: true, method: :get do |f| %>
-                <div>
+                <div class="form-control-lg mb-5">
                     <%= f.label :name1, '１.' %>
                     <%= f.text_field :name1 %>
                 </div>
-                <div>
+                <div class="form-control-lg mb-5">
                     <%= f.label :name2, '２.' %>
                     <%= f.text_field :name2 %>
                 </div>
-                <div class"mb-5">
+                <div class="form-control-lg mb-5">
                     <%= f.label :name3, '３.' %>
                     <%= f.text_field :name3 %>
               　</div>
-                <%= submit_tag "検索" %>
+              　<div class="form-button col-form-label-lg ml-5" style="background: #f16272; border-radius: 10px; width:230px; text-align: center; ">
+                    <%= f.submit '検索', class: 'btn ',style: "font-size: 20px;" %>
+                </div>
             <% end %>
         </div>
         
