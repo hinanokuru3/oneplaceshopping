@@ -38,20 +38,20 @@
         
     </div>
     
-    <div>
-        <div class="mt-5 mb-5 text-center">
+    <div class="mb-8">
+        <div class="mt-8 mb-5 text-center">
             <h1>～ショッピングモール情報～</h1>
         </div>
         <div class="mb-7 text-center">
             <table class="table">
                 <thead>
-                    <tr><th style="font-size: 30px;">ショッピングモール名</th></tr>
+                    <tr><th><h2>ショッピングモール名</h2></th></tr>
                 </thead>
               
                 
                 <tbody>
                     <% @shopping_center.each do |shopping_center| %>
-                        <tr><td style="font-size: 20px;"><%= link_to shopping_center.name, shopping_center_path(shopping_center) %></td></tr>
+                        <tr><td class="mb-5" style="font-size: 20px;"><%= link_to shopping_center.name, shopping_center_path(shopping_center) %></td></tr>
                     <% end %>
                 </tbody>
             </table>
