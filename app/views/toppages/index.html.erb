@@ -1,4 +1,7 @@
 <%= stylesheet_link_tag 'toppage', :media => 'all' %>
+<% if logged_in? %>
+    <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% end %>
 <div class="container-fluid">
     <div class="row">
     	<div class="col-xs-12 cover-img" style="background-image:url('https://publicdomainq.net/images/201801/25s/publicdomainq-0018195xbz.jpg');">
