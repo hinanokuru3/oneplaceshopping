@@ -13,13 +13,4 @@ class ShoppingCenter < ApplicationRecord
     has_many :users
     has_many :histories
     
-    def browsing_history(user)
-        new_history = histories.new
-        new_history.user_id = user.id
-    # 同じ投稿をcurrent_userが閲覧している場合、古い履歴を削除
-        if user.histories.exists?(shopping_center_id: id)
-            visited_history = user.histories.find_by(shopping_center_id: id)
-            visited_history.destroy
-        end
-        new_history.save
-    end
+end
