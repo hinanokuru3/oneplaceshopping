@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @browsed_shopping_center = ShoppingCenter.joins(:histories).where(is_draft: false,'histories.user_id': @user.id).order('histories.created_at': "DESC")
   end
   
   def new

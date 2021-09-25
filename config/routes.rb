@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :shopping_centers do
     collection do
       get'search'
+      get'browsing_history'
     end
   end
   resources :shops, only: [:index, :show]

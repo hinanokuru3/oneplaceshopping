@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+ <table>
+   <% @browsed_posts.each do |browsed_post| %>
+     <tr>
+       <td><%= link_to browsed_shopping_center.name, shopping_center_path(browsed_shopping_center) %></td>
+      
+     </tr>
+   <% end %>
+ </table>
