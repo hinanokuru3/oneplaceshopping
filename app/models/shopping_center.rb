@@ -10,7 +10,7 @@ class ShoppingCenter < ApplicationRecord
         keywords.map {|keyword| joins(:shops).where(shops: {name: keyword}) }.inject(:&)
     }
     
-    has_many :users
+    
     has_many :histories
     
 end
