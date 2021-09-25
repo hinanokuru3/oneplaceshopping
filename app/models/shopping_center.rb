@@ -9,4 +9,6 @@ class ShoppingCenter < ApplicationRecord
     scope :search_by_keywords, -> (keywords) {
         keywords.map {|keyword| joins(:shops).where(shops: {name: keyword}) }.inject(:&)
     }
+    
+    has_many :users
 end

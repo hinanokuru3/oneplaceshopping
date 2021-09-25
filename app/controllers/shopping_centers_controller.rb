@@ -4,15 +4,17 @@ class ShoppingCentersController < ApplicationController
 
   def show
     @shopping_center=ShoppingCenter.find(params[:id])
+    new_history=@shopping_center.histories.new
+    new_history.user.id=current_user.id
+    if current_user.histories.exists?(shopping_center_id: "#{params[:id]}")
+      old_history = current_user.histories.find_by(shopping_center_id: "#{params[:id]}")
+      old_history.destroy
+    end
+    
+    new_history.save
   end
   
   def search
-    #binding.pry
-    #@shop=Shop.where("name LIKE ?", "#{params[:name1]}")
-    #base_condition
-    #name_condition1
-    #name_condition2
-    #name_condition3
     @shopping_center=ShoppingCenter.search_by_keywords(search_keywords)
   end
 
