@@ -11,6 +11,18 @@ class ShoppingCenter < ApplicationRecord
     }
     
     
-    has_many :histories
+    has_many :histories, dependent: :destroy
+    
+    #def shopping_center_history(user)#閲覧履歴
+    
+        
+      
+        #new_history = current_user.histories.new
+        #new_history.user_id = current_user.id
+    
+        #new_history.save
+     
+    
+    #end
     
 end
