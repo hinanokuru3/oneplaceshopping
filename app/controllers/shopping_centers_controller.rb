@@ -1,24 +1,18 @@
 class ShoppingCentersController < ApplicationController
-  #def index
-    #@shopping_centers=ShoppingCenter.all
+  before_action :require_user_logged_in, only: [:shopping_center_history]
+  
 
   def show
     @shopping_center=ShoppingCenter.find(params[:id])
-     
-    new_history = @shopping_center.histories.new
-    new_history.user_id = current_user.id
-    new_history.save
-    
-    histories_stock_limit = 10
-    histories = current_user.histories.all
-    if histories.count > histories_stock_limit
-      histories[0].destroy
+    if logged_in?
+      @shopping_center.left_history(current_user)
     end
      
   end
   
   def shopping_center_history#閲覧履歴
-    @history = History.all
+    @history = current_user.histories.order(created_at: :desc).limit(10)
+    
   end
    
     
@@ -38,9 +32,10 @@ class ShoppingCentersController < ApplicationController
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
-  def logged_in?
-    !!current_user
-  end
   
- 
+  def require_user_logged_in
+    unless logged_in?
+      redirect_to "/shopping_centers/search"
+    end
+  end
 end

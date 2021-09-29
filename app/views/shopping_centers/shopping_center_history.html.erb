@@ -8,17 +8,19 @@
     	</div>
     </div>
 
-    <div class="mb-5">
+    <div class="mb-5 text-center">
         <div class="mt-5 mb-5 text-center">
             <h1>～閲覧履歴～</h1>
         </div>
      
-        <tbody>
-            <% @history.each do |history| %>
-            <div class="offset-sm-5 mb-4" style="display: block; font-size: 20px; ">
-                <%= link_to history.shopping_center.name, shopping_center_path(history) %>
-            </div>
-            <% end %>
-        </tbody>
+        <table class="table">
+            <tbody>
+                <% @history.each do |history| %>
+                
+                    <tr><td style="font-size: 20px;"><%= link_to history.shopping_center.name, shopping_center_path(history.shopping_center) %></td></tr>
+               
+                <% end %>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -15,9 +15,15 @@
         <aside class='select_button'>
     	    <nav class='select'>
     	        <ul class='select_content'>
-    	            <li><a href="login">ログイン</a></li>
+    	            <% if logged_in? %>
+    	                <li><a href="logout" data-method="delete">ログアウト</a></li>
+    	            <% else %>
+    	                <li><a href="login">ログイン</a></li>
+    	            <% end %>
                     <li><a href="shopping_centers/search">検索ページ</a></li>
-                    <li><a href="shopping_centers/shopping_center_history">閲覧履歴</a></li>
+                    <% if logged_in? %>
+                        <li><a href="shopping_centers/shopping_center_history">閲覧履歴</a></li>
+                    <% end %>
     	        </ul>
     	    </nav>
     	</aside>

@@ -5,8 +5,6 @@ class UsersController < ApplicationController
   
   def show
     @user = current_user
-    
-    #@histories = ShoppingCenter.joins(:histories).where('histories.user_id': @user.id)
   end
   
   def new
